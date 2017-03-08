@@ -1,0 +1,15 @@
+﻿using ProductCatalog.API.Model;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace ProductCatalog.API.Services
+{
+    public interface ICatalogServices
+    {
+        IEnumerable<Product> GetProducts();
+        Product FindById(int productId);
+        Product FindByName(string productName);
+    }
+}

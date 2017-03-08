@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using ProductCatalog.API.Services;
+using ProductCatalog.API.Model;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -11,33 +13,44 @@ namespace ProductCatalog.API.Controllers
     [Route("api/[controller]")]
     public class ProductController : Controller
     {
-        // GET: api/values
+        private ICatalogServices catalogServices;
+
+        public ProductController(ICatalogServices catalogServices)
+        {
+            this.catalogServices = catalogServices;
+        }
+        
         [HttpGet]
-        public IEnumerable<string> Get()
-        {
-            return new string[] { "value1", "value2" };
+        public IEnumerable<Product> GetAll()
+        {            
+            return catalogServices.GetProducts();
         }
 
-        // GET api/values/5
-        [HttpGet("{id}")]
-        public string Get(int id)
+        
+        [HttpGet("{id:int}")]
+        public IActionResult GetProductById(int productId)
         {
-            return "value";
+            var item = catalogServices.FindById(productId);
+            return new ObjectResult(item);
         }
 
-        // POST api/values
+        [HttpGet("{name}")]
+        public IActionResult GetProductByName(string productName)
+        {
+            var item = catalogServices.FindByName(productName);
+            return new ObjectResult(item);
+        }
+
         [HttpPost]
         public void Post([FromBody]string value)
         {
         }
-
-        // PUT api/values/5
+        
         [HttpPut("{id}")]
         public void Put(int id, [FromBody]string value)
         {
         }
 
-        // DELETE api/values/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
