@@ -9,7 +9,7 @@ namespace ProductCatalog.API.Services
     public interface ICatalogServices
     {
         IEnumerable<Product> GetProducts();
-        Product FindById(int productId);
-        Product FindByName(string productName);
+        Product FindProductById(int productId);
+        Product FindProductByName(string productName);
     }
 }

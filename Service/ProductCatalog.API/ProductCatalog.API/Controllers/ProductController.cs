@@ -28,17 +28,17 @@ namespace ProductCatalog.API.Controllers
 
         
         [HttpGet("{id:int}")]
-        public IActionResult GetProductById(int productId)
+        public Product GetProductById(int productId)
         {
-            var item = catalogServices.FindById(productId);
-            return new ObjectResult(item);
+            var item = catalogServices.FindProductById(productId);
+            return item;
         }
 
         [HttpGet("{name}")]
-        public IActionResult GetProductByName(string productName)
+        public Product GetProductByName(string productName)
         {
-            var item = catalogServices.FindByName(productName);
-            return new ObjectResult(item);
+            var item = catalogServices.FindProductByName(productName);
+            return item;
         }
 
         [HttpPost]
