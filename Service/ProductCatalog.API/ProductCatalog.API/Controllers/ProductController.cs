@@ -25,19 +25,18 @@ namespace ProductCatalog.API.Controllers
         {            
             return catalogServices.GetProducts();
         }
-
         
         [HttpGet("{id:int}")]
-        public Product GetProductById(int productId)
+        public Product GetProductById(int id)
         {
-            var item = catalogServices.FindProductById(productId);
+            var item = catalogServices.FindProductById(id);
             return item;
         }
 
         [HttpGet("{name}")]
-        public Product GetProductByName(string productName)
+        public Product GetProductByName(string name)
         {
-            var item = catalogServices.FindProductByName(productName);
+            var item = catalogServices.FindProductByName(name);
             return item;
         }
 

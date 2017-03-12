@@ -250,3 +250,4 @@ paket-files/
 # JetBrains Rider
 .idea/
 *.sln.iml
+/Service/ProductCatalog.API/ProductCatalog.API/Model/Data.xml
