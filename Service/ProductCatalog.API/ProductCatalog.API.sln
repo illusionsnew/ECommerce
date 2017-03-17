@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26228.4
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductCatalog.API", "ProductCatalog.API\ProductCatalog.API.csproj", "{20999658-5059-4C19-A0A9-41C57FDB6388}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductCatalog.API", "ProductCatalog.API\ProductCatalog.API.csproj", "{20999658-5059-4C19-A0A9-41C57FDB6388}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductCatalog.Test", "ProductCatalog.Test\ProductCatalog.Test.csproj", "{7EAEE0A4-F9BF-4FC2-AF5A-D34D628A9E3A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductCatalog.Test", "ProductCatalog.Test\ProductCatalog.Test.csproj", "{7EAEE0A4-F9BF-4FC2-AF5A-D34D628A9E3A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductCatalog.DA", "ProductCatalog.DA\ProductCatalog.DA.csproj", "{6769836D-C9CC-4D75-BA8E-06472167FE15}"
 EndProject
