@@ -10,11 +10,13 @@ namespace ProductCatalog.API.Services
     public class CatalogServices : ICatalogServices
     {
         private readonly List<Product> products;
+       
         public CatalogServices()
         {
             products = new List<Product>();
             var product1 = new Product { Id = 1, Name = "FF200", Description = "Battery", Quantity = 12 };
             var product2 = new Product { Id = 2, Name = "FF204", Description = "Wiper", Quantity = 10 };
+            
             products.Add(product1);
             products.Add(product2);
         }
