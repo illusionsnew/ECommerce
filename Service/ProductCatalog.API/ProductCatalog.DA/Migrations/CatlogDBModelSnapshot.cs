@@ -7,7 +7,7 @@ using ProductCatalog.DA;
 
 namespace ProductCatalog.DA.Migrations
 {
-    [DbContext(typeof(CatlogDB))]
+    [DbContext(typeof(CatalogDB))]
     partial class CatlogDBModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

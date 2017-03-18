@@ -10,7 +10,7 @@ namespace ProductCatalog.DA
     {
         static void Main(string[] args)
         {
-            using (var dataBase = new CatlogDB())
+            using (var dataBase = new CatalogDB())
             {
                 dataBase.Products.Add(new Product { Name = "FF200", Description = "Alternator", Quantity = 100 });
                 dataBase.Products.Add(new Product { Name = "LF300", Description = "Wiper", Quantity = 120 });

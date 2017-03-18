@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ProductCatalog.DA
 {
-    public class CatlogDB : DbContext
+    public class CatalogDB : DbContext
     {
         public DbSet<Product> Products { get; set; }
 

@@ -7,7 +7,7 @@ using ProductCatalog.DA;
 
 namespace ProductCatalog.DA.Migrations
 {
-    [DbContext(typeof(CatlogDB))]
+    [DbContext(typeof(CatalogDB))]
     [Migration("20170315033309_Products")]
     partial class Products
     {

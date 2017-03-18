@@ -19,6 +19,8 @@ namespace ProductCatalog.API.Services
             
             products.Add(product1);
             products.Add(product2);
+
+            var catalogSqlDb = new CatalogSQLDB();
         }
         public Product FindProductById(int productId)
         {
