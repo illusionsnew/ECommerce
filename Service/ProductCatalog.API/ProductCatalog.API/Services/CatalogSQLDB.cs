@@ -15,10 +15,10 @@ namespace ProductCatalog.API.Services
 
         public IEnumerable<Model.Product> Products()
         {
-            return AsModelProducts(catalogDB.Products); ;
+            return ConvertAsModelProducts(catalogDB.Products); ;
         }
 
-        private static IEnumerable<Model.Product> AsModelProducts(Microsoft.EntityFrameworkCore.DbSet<Product> dbProducts)
+        private static IEnumerable<Model.Product> ConvertAsModelProducts(Microsoft.EntityFrameworkCore.DbSet<Product> dbProducts)
         {
             return dbProducts.Select(product => new Model.Product
             {
