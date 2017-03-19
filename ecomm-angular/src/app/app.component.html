@@ -1,15 +1,25 @@
-<h1>
-    {{title}}
-</h1>
-<div class="header-bar"></div>
-<nav>
-    <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
-    <a routerLink="/product/product" routerLinkActive="active">Products</a>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid1">
+    <ul class="nav navbar-nav">
+        <li class="active"><a routerLink="/dashboard">Parts Catalog</a></li>      
+      </ul>
+      <form class="navbar-form navbar-left">
+      <div class="form-group">
+        <input type="text" #searchBox name = "searchBox" class="form-control" placeholder="Search by Parts Name">
+      </div>
+      <button type="submit" (click)="setClickedRow(searchBox.value)" class="btn btn-default">Submit</button>
+    </form>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span>Login</a></li>
+      </ul>
+  </div>
 </nav>
-<h1>Products</h1>
-
-
-<table class="table table-hover">
+<h1>Product List</h1>
+<div class="nav navbar-nav navbar-right">
+<button routerLink="/product/product" type="button" class="btn btn-success">Add Product</button>
+</div>
+<table class="table table-condensed">
     <thead>
         <tr>
             <th>ID</th>
@@ -19,7 +29,7 @@
         </tr>
     </thead>
     <tbody>
-
+        
         <tr *ngFor="let value of values; let i = index" (click)="setClickedRow(value.name)">
 
             <td>{{value.id}}</td>
@@ -31,17 +41,17 @@
     </tbody>
 </table>
 
-<div *ngIf="product">  
-    <table class="table table-bordered">
-        <tr>
-            <td>{{product.id}}</td>
-            <td>{{product.name}}</td>
-            <td>{{product.description}}</td>
-            <td>{{product.quantity}}</td>
-        </tr>
+<div *ngIf="product"> <br/> 
+    Detail Product View <br/><br/>
+    <div class="list-group">
+        <a class="list-group-item">ID : {{product.id}}</a>
+        <a class="list-group-item">Name : {{product.name}}</a>
+        <a class="list-group-item">Description : {{product.description}}</a>
+        <a class="list-group-item">Quantity : {{product.quantity}}</a>
+    </div>    
+</div>
 
-
-    </table>
-
+<div>
 
 </div>
+
