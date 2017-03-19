@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using ProductCatalog.API.Services;
-using ProductCatalog.API.Model;
+using ProductCatalog.DA;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -13,9 +13,9 @@ namespace ProductCatalog.API.Controllers
     [Route("api/[controller]")]
     public class ProductController : Controller
     {
-        private ICatalogServices catalogServices;
+        private ICatalog catalogServices;
 
-        public ProductController(ICatalogServices catalogServices)
+        public ProductController(ICatalog catalogServices)
         {
             this.catalogServices = catalogServices;
         }

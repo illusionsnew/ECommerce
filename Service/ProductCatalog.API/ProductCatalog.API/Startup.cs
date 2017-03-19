@@ -40,7 +40,8 @@ namespace ProductCatalog.API
 
             // Add framework services.
             services.AddMvc();
-            services.AddSingleton<ICatalogServices, CatalogServices>();
+            //services.AddSingleton<ICatalogServices, CatalogServices>();
+            services.AddSingleton<ICatalog, Catalog>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

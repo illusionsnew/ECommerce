@@ -12,8 +12,9 @@ namespace ProductCatalog.DA
         {
             using (var dataBase = new CatlogDB())
             {
-                dataBase.Products.Add(new Product { Name = "FF200", Description = "Alternator", Quantity = 100 });
-                dataBase.Products.Add(new Product { Name = "LF300", Description = "Wiper", Quantity = 120 });
+                dataBase.Products.Add(new Product { Name = "FF202", Description = "Alternator1", Quantity = 300 });
+                dataBase.Products.Add(new Product { Name = "LF303", Description = "Wiper1", Quantity = 220 });
+                dataBase.Products.Add(new Product { Name = "LF305", Description = "Wiper2", Quantity = 260 });
                 dataBase.SaveChanges();
             }
         }

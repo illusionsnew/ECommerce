@@ -125,7 +125,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CatalogDB.cs" />
+    <Compile Include="CatlogDB.cs" />
     <Compile Include="Migrations\20170315033309_Products.cs" />
     <Compile Include="Migrations\20170315033309_Products.designer.cs">
       <DependentUpon>20170315033309_Products.cs</DependentUpon>
