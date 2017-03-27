@@ -130,6 +130,10 @@
     <Compile Include="Migrations\20170315033309_Products.designer.cs">
       <DependentUpon>20170315033309_Products.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20170327025541_Image.cs" />
+    <Compile Include="Migrations\20170327025541_Image.designer.cs">
+      <DependentUpon>20170327025541_Image.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\CatlogDBModelSnapshot.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="Program.cs" />
