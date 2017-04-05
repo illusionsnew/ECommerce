@@ -8,9 +8,10 @@ using ProductCatalog.DA;
 namespace ProductCatalog.DA.Migrations
 {
     [DbContext(typeof(CatlogDB))]
-    partial class CatlogDBModelSnapshot : ModelSnapshot
+    [Migration("20170405023434_Price")]
+    partial class Price
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.1.1")
