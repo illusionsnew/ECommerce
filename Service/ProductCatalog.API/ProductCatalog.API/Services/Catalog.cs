@@ -14,6 +14,15 @@ namespace ProductCatalog.API.Services
         {
             catalogDB = new CatlogDB();
         }
+
+        public string DeleteProduct(int productId)
+        {
+            Product product = catalogDB.Products.Where(p => p.Id == productId).FirstOrDefault();
+            catalogDB.Products.Remove(product);
+            catalogDB.SaveChanges();
+            return "Product Deleted Successfully";
+        }
+
         public Product FindProductById(int productId)
         {
             return catalogDB.Products.FirstOrDefault(p => p.Id == productId);

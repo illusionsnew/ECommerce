@@ -51,8 +51,9 @@ namespace ProductCatalog.API.Controllers
         }
 
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public string Delete(int id)
         {
+            return catalogServices.DeleteProduct(id);
         }
     }
 }

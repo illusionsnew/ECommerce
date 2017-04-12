@@ -45,5 +45,22 @@ namespace ProductCatalog.MVC.Services
             }
             return JsonConvert.DeserializeObject<Product>(resposeJson);
         }
+
+        public string DeleteProduct(int id)
+        {
+            using (var client = new HttpClient())
+            {
+                client.BaseAddress = new Uri(baseURL);
+                client.DefaultRequestHeaders.Accept.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));                
+                var apiRespose = client.DeleteAsync("api/product/" + id).Result;
+                if (apiRespose.IsSuccessStatusCode)
+                {
+                    resposeJson = apiRespose.Content.ReadAsStringAsync().Result;
+                }
+            }
+
+            return resposeJson;
+        }
     }
 }

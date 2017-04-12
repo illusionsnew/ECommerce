@@ -78,7 +78,8 @@ namespace ProductCatalog.MVC.Controllers
         // GET: Product/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+            var product = catalogServices.DeleteProduct(id);            
+            return RedirectToAction("Index");
         }
 
         // POST: Product/Delete/5

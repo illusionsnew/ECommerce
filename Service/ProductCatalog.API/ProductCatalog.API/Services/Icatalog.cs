@@ -11,5 +11,6 @@ namespace ProductCatalog.API.Services
         IEnumerable<Product> GetProducts();
         Product FindProductById(int productId);
         Product FindProductByName(string productName);
+        string DeleteProduct(int productId);
     }
 }
