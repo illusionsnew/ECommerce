@@ -13,6 +13,11 @@ namespace ProductCatalog.MVC.Services
     {
         Helper helper = new Helper();
 
+        public string CreateNewProduct(Product p)
+        {
+            return helper.CreateNewProduct(p);
+        }
+
         public string DeleteProduct(int id)
         {
             return helper.DeleteProduct(id);

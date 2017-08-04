@@ -62,5 +62,17 @@ namespace ProductCatalog.MVC.Services
 
             return resposeJson;
         }
+
+        public string CreateNewProduct(Product p)
+        {
+            using (var client = new HttpClient())
+            {
+                client.BaseAddress = new Uri(baseURL);
+                client.DefaultRequestHeaders.Accept.Clear();
+                //client.PostAsync<Product>("api/product", p).ContinueWith(())
+                
+            }
+            return "Product Added Successfully";
+        }
     }
 }

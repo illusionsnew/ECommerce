@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ProductCatalog.MVC.Services;
+using ProductCatalog.MVC.Models;
 
 namespace ProductCatalog.MVC.Controllers
 {
@@ -38,12 +39,12 @@ namespace ProductCatalog.MVC.Controllers
         // POST: Product/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public ActionResult Create(Product p)
         {
             try
             {
                 // TODO: Add insert logic here
-
+                var product = catalogServices.CreateNewProduct(p);
                 return RedirectToAction("Index");
             }
             catch

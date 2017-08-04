@@ -51,14 +51,14 @@
         </div>
     </nav>
     <div class="container body-content">  <br/>     
-        <div class="nav navbar-nav navbar-right">
-            <button routerLink="/product/product" type="button" class="btn btn-success">Add Product</button>
+        <div class="nav navbar-nav navbar-right">            
+            <button onclick="location.href='@Url.Action("Create","Product")'" type="button" class="btn btn-success">Add Product</button>
         </div><br/>
         @RenderBody()
         
         <hr />
         <footer>
-            <p>&copy; 2017 - Product Catalog/p>
+            <p>&copy; 2017 - Product Catalog</p>
         </footer>
     </div>
 

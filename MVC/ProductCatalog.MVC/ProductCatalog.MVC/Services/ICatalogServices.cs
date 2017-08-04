@@ -11,5 +11,6 @@ namespace ProductCatalog.MVC.Services
         IEnumerable<Product> GetProducts();
         Product FindProductByIdOrName(string productIdorName);
         string DeleteProduct(int id);
+        string CreateNewProduct(Product p);
     }
 }
